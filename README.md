@@ -3,21 +3,20 @@
 This project leverages **Group Relative Policy Optimization (GRPO)**, an advanced reinforcement learning technique, to fine-tune Meta's Llama 3.1 model for accounting-specific tasks.
 
 
-using **Group Relative Policy Optimization (GRPO)**, where the model generates multiple outputs for each prompt, evaluates them using custom reward functions, and learns to optimize its responses based on relative rewards.
+GRPO is where the model generates multiple outputs for each prompt, evaluates them using custom reward functions, and learns to optimize its responses based on relative rewards.
 **Structured Output:** Trained the model to provide structured responses with clear `<reasoning>` and `<answer>` tags.
 **Kaggle T4 GPU Utilization**: with 4bit quantization.
 
+
 ## Training Details:
 
-*   **Base Model:** Meta Llama 3.1(8B)
-*   **Fine-tuning Library:** Unsloth
-*   **Optimization:** GRPO (Group Relative Policy Optimization), LoRA (Low-Rank Adaptation)
-*   **Training Loss:** Final training loss = 0.0191
-*   **Parameter-Efficient Tuning:** LoRA Rank = 32
+   **Base Model:** Meta Llama 3.1(8B)
+   **Fine-tuning Library:** Unsloth
+   **Optimization:** lora with peft
+   **Training Loss:** Final training loss = 0.0191
+   **Parameter-Efficient Tuning:** LoRA Rank = 32
 
 ## Demo
-
-Here’s a glimpse of the model in action:
 
    **Prompt:** "Explain the matching principle and its importance in financial reporting."
 
@@ -44,3 +43,5 @@ the functions work on:
 The model optimizes by comparing rewards across completions, driving improvements in reasoning and accuracy.
 
 
+Thanks to Unsloth
+Documentation you may refer: https://docs.unsloth.ai/
