@@ -3,9 +3,9 @@
 This repository demonstrates the fine-tuning of Meta's Llama 3.1 model for accounting-specific tasks using **Group Relative Policy Optimization (GRPO)** and **Low-Rank Adaptation (LoRA)**. The project is designed to showcase advanced financial reasoning capabilities while maintaining computational efficiency
 
 
-*    Implemented **Group Relative Policy Optimization (GRPO)**, where the model generates multiple outputs for each prompt, evaluates them using custom reward functions, and learns to optimize its responses based on relative rewards.
-*   **Structured Output:** Trained the model to provide structured responses with clear `<reasoning>` and `<answer>` tags.
-- **Kaggle T4 GPU Utilization**: with 4bit quantization.
+    Implemented **Group Relative Policy Optimization (GRPO)**, where the model generates multiple outputs for each prompt, evaluates them using custom reward functions, and learns to optimize its responses based on relative rewards.
+   **Structured Output:** Trained the model to provide structured responses with clear `<reasoning>` and `<answer>` tags.
+ **Kaggle T4 GPU Utilization**: with 4bit quantization.
 
 ## Training Details:
 
