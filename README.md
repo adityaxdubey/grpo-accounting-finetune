@@ -32,19 +32,16 @@ Here’s a glimpse of the model in action:
 
 **Note**: If you're using a Linux system, enable faster inference with vLLM
 
-## How GRPO Works
+## How Reinforcement works here
 
-### 1. **Multiple Completions per Prompt**
-During training, the model generates multiple completions for each prompt. These completions are evaluated using custom reward functions, which assess various aspects of the output.
+model generates multiple output, all of which are rewarded
 
-### 2. **Custom Reward Functions**
 The following reward functions are used to evaluate and score each completion:
-- **XML Format Adherence**: Ensures that responses follow the required `<reasoning>` and `<answer>` structure.
-- **Accounting Terminology Usage**: Rewards the use of domain-specific terms like "liability," "equity," and "cash flow."
-- **Application of Accounting Principles**: Evaluates whether the response applies principles like "matching," "revenue recognition," and "conservatism."
-- **Semantic Correctness**: Measures how closely the generated output aligns with expected answers.
+- **XML Format Adherence**: Ensures `<reasoning>` and `<answer>` structure.
+- **Accounting Terminology Usage**: Rewards use of terms like "liability," "equity."
+- **Application of Accounting Principles**:  Evaluates application of accounting principles.
+- **Semantic Correctness**: Measures alignment with expected answers.
 
-### 3. **Relative Rewards**
-The model compares rewards between completions for the same prompt and learns to optimize its policy to maximize relative rewards. This internal competition drives improvements in reasoning and accuracy.
+The model optimizes by comparing rewards across completions, driving improvements in reasoning and accuracy.
 
 
