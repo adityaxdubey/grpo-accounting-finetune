@@ -2,12 +2,10 @@
 
 This repository demonstrates the fine-tuning of Meta's Llama 3.1 model for accounting-specific tasks using **Group Relative Policy Optimization (GRPO)** and **Low-Rank Adaptation (LoRA)**. The project is designed to showcase advanced financial reasoning capabilities while maintaining computational efficiency
 
-**Key Highlights:**
 
-*   **GRPO-Enhanced Reasoning:** Implemented **Group Relative Policy Optimization (GRPO)**, where the model generates multiple outputs for each prompt, evaluates them using custom reward functions, and learns to optimize its responses based on relative rewards.
-*   **LoRA Efficiency:** Utilized Low-Rank Adaptation (LoRA) for parameter-efficient fine-tuning, reducing computational costs while maintaining high performance. Perfect for resource-constrained environments like Kaggle!
-*   **Structured Output:** Trained the model to provide structured responses with clear `<reasoning>` and `<answer>` tags, enhancing readability and interpretability.
-- **Kaggle T4 GPU Utilization**: Fine-tuned the model efficiently on Kaggle's T4 GPU with 4-bit quantization to reduce memory usage.
+*    Implemented **Group Relative Policy Optimization (GRPO)**, where the model generates multiple outputs for each prompt, evaluates them using custom reward functions, and learns to optimize its responses based on relative rewards.
+*   **Structured Output:** Trained the model to provide structured responses with clear `<reasoning>` and `<answer>` tags.
+- **Kaggle T4 GPU Utilization**: with 4bit quantization.
 
 ## Training Details:
 
@@ -21,7 +19,7 @@ This repository demonstrates the fine-tuning of Meta's Llama 3.1 model for accou
 
 Here’s a glimpse of the model in action:
 
-*   **Prompt:** "Explain the matching principle and its importance in financial reporting."
+   **Prompt:** "Explain the matching principle and its importance in financial reporting."
 
     ```
     <reasoning>
