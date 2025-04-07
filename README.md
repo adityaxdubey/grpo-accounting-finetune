@@ -1,11 +1,11 @@
-# GRPO Accounting Finetune: Elevating Financial Reasoning
+# GRPO Accounting Finetune: Financial Reasoning
 
 This project leverages **Group Relative Policy Optimization (GRPO)**, an advanced reinforcement learning technique, to fine-tune Meta's Llama 3.1 model for accounting-specific tasks.
 
 
-    using **Group Relative Policy Optimization (GRPO)**, where the model generates multiple outputs for each prompt, evaluates them using custom reward functions, and learns to optimize its responses based on relative rewards.
-   **Structured Output:** Trained the model to provide structured responses with clear `<reasoning>` and `<answer>` tags.
- **Kaggle T4 GPU Utilization**: with 4bit quantization.
+using **Group Relative Policy Optimization (GRPO)**, where the model generates multiple outputs for each prompt, evaluates them using custom reward functions, and learns to optimize its responses based on relative rewards.
+**Structured Output:** Trained the model to provide structured responses with clear `<reasoning>` and `<answer>` tags.
+**Kaggle T4 GPU Utilization**: with 4bit quantization.
 
 ## Training Details:
 
@@ -35,12 +35,11 @@ Here’s a glimpse of the model in action:
 ## How Reinforcement works here
 
 model generates multiple output, all of which are rewarded
-
-The following reward functions are used to evaluate and score each completion:
-- **XML Format Adherence**: Ensures `<reasoning>` and `<answer>` structure.
-- **Accounting Terminology Usage**: Rewards use of terms like "liability," "equity."
-- **Application of Accounting Principles**:  Evaluates application of accounting principles.
-- **Semantic Correctness**: Measures alignment with expected answers.
+the functions work on:
+-  Ensures `<reasoning>` and `<answer>` structure.
+-  Rewards use of terms like "liability," "equity."
+-  Evaluates application of accounting principles.
+-  Measures alignment with expected answers.
 
 The model optimizes by comparing rewards across completions, driving improvements in reasoning and accuracy.
 
